@@ -1,4 +1,5 @@
 ﻿
+
 (function(){
   const datos   = window.__NODOS__ || [];
   const rootEl  = document.getElementById('orgchart');
@@ -79,14 +80,13 @@
 
     const isNarrow = window.matchMedia('(max-width: 768px)').matches;
 
-    // Ajustes por grupo: columnas mínimas (si quieres) y márgenes dinámicos
+    // Ajustes por grupo
     childrenEl.querySelectorAll('.area-group').forEach(group => {
       const cardsRow = group.querySelector('.cards-row');
       if (!cardsRow) return;
 
       const nodes = cardsRow.querySelectorAll('.node').length;
 
-      // Heurística simple de “min-cols” (opcional; útil para grupos muy grandes)
       let minCols = 1;
       if (!isNarrow){
         if (nodes >= 4 && nodes <= 5) minCols = 2;

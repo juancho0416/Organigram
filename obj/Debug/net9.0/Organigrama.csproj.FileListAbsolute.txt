@@ -94,5 +94,5 @@ C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva c
 C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\dw0b2hykxm-qlccset4i1.gz
 C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\edim5iettx-xzw0cte36n.gz
 C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\x8k3oyy18w-jfsiqqwiad.gz
-C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\efj3a2zml3-ii2pcptmfx.gz
-C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\agqwvau54p-tqlqsxw18k.gz
+C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\efj3a2zml3-z0lpyvjznb.gz
+C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\Organigrama\obj\Debug\net9.0\compressed\agqwvau54p-m0d47k6s7z.gz
