@@ -18,7 +18,7 @@
             { id: 34, nombre: 'Alfredo', puesto: 'Subdirector', area: 'T', email: 'alfredo@cn.mx', jefeId: 30, foto: '' },
             { id: 41, nombre: 'Vite', puesto: 'Subdirector', area: 'Infraestructura', email: 'vite@cn.mx', jefeId: 40, foto: '' },
             { id: 51, nombre: 'Marlene', puesto: 'Subdirector', area: 'T', email: 'marlene@cn.mx', jefeId: 30, foto: '' },
-
+            
             // Jefaturas
             { id: 12, nombre: 'Fani', puesto: 'Jefe', area: 'Base de datos', email: 'fani@cn.mx', jefeId: 11, foto: '' },
             { id: 22, nombre: 'Jose', puesto: 'Jefe', area: 'Desarrollo', email: 'jose@cn.mx', jefeId: 21, foto: '' },
@@ -27,11 +27,8 @@
             { id: 52, nombre: 'Ale', puesto: 'Jefe', area: 'Operaciones', email: 'ale@cn.mx', jefeId: 50, foto: '' },
 
             // Enlaces
-            { id: 13, nombre: 'Enlace BD', puesto: 'Enlace', area: 'Base de datos', email: 'enlace.bd@cn.mx', jefeId: 12, foto: '' },
             { id: 23, nombre: 'Juan', puesto: 'Enlace', area: 'Desarrollo', email: 'juan@cn.mx', jefeId: 22, foto: '' },
             { id: 33, nombre: 'Fernando', puesto: 'Enlace', area: 'T', email: 'fernando@cn.mx', jefeId: 34, foto: '' },
-            { id: 36, nombre: 'Enlace TI 2', puesto: 'Enlace', area: 'T', email: 'enlace.ti2@cn.mx', jefeId: 35, foto: '' },
-            { id: 43, nombre: 'Enlace Infra', puesto: 'Enlace', area: 'Infraestructura', email: 'enlace.infra@cn.mx', jefeId: 42, foto: '' },
             { id: 53, nombre: 'Gus', puesto: 'Enlace', area: 'Operaciones', email: 'gus@cn.mx', jefeId: 52, foto: '' },
             { id: 54, nombre: 'Clemente', puesto: 'Enlace', area: 'Operaciones', email: 'clemente@cn.mx', jefeId: 52, foto: '' },
         ];

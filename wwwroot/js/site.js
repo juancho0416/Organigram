@@ -123,7 +123,7 @@
     if (groupEl) groupEl.classList.add('is-area-focused');
   }
 
-  // === Selección Liquid Glass ===
+  // Selección Liquid Glass
   let selectedCard = null;
   function setGlassPointer(card, e){
     const rect = card.getBoundingClientRect();
@@ -147,7 +147,7 @@
     if (groupEl && token) focusArea(token, groupEl);
   }
 
-  // === Helper DOM ===
+  // Helper dom
   function el(tag, className, text){
     const e = document.createElement(tag);
     if (className) e.className = className;
@@ -155,7 +155,7 @@
     return e;
   }
 
-  // === Crear tarjeta persona ===
+  // Crear tarjeta persona
   function renderNodo(node){
     const card = document.createElement('div');
     card.className = 'node';
