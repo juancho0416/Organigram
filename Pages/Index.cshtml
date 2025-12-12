@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Organigrama";
+    Layout = "_Layout";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/site.css">
+}
+</style>
+<section>
+
+    <div id="orgchart" class="orgchart-root" aria-live="polite"></div>
+
+    <!-- Modal para detalles (CV a futuro) -->
+    <dialog id="detalleModal" class="modal">
+        <form method="dialog" class="modal-card">
+            <header class="modal-header">
+                <h2 id="modalTitulo">Detalle</h2>
+                <button class="btn-cerrar" value="close" aria-label="Cerrar">✕</button>
+            </header>
+            <div class="modal-content">
+                <div class="modal-avatar">
+                    <div id="modalAvatar" class="avatar"></div>
+                </div>
+                <div class="modal-info">
+                    <p><strong>Nombre:</strong> <span id="modalNombre"></span></p>
+                    <p><strong>Puesto:</strong> <span id="modalPuesto"></span></p>
+                    <p><strong>Área:</strong> <span id="modalArea"></span></p>
+                    <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                    <hr />
+                    <p class="muted">CV y actividades</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn" value="close">Cerrar</button>
+            </footer>
+        </form>
+    </dialog>
+    <script src="../wwwroot/js/site.js"></script>
+</section>
+
+@section Scripts {
+
+    <script src="~/js/nodos.js"></script>
+    <script src="~/js/site.js"></script>
+
+}
