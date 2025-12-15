@@ -25,7 +25,7 @@
 html, body { height: 100%; background: var(--bg); color: var(--text); }
 body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text", Roboto, Arial; font-size: 16px; }
 
-/* === Header y Controles === */
+/*  Header y Controles  */
 .app-header{
     display:flex; align-items:center; justify-content:space-between;
     padding: 16px 30px; border-bottom:1px solid var(--border);
@@ -48,7 +48,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
 .btn-accent { background: var(--accent); border-color: var(--accent); color: white; font-weight: 600; }
 .btn-accent:hover { background: #0069d9; }
 
-/* === Main Content & Breadcrumb === */
+/* Main Content & Breadcrumb */
 .main-content { padding: 30px; }
 .breadcrumb-nav { margin-bottom: 24px; }
 .breadcrumb-list { display: flex; list-style: none; padding: 0; margin: 0; }
@@ -58,7 +58,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
 .breadcrumb-item.is-active .breadcrumb-link { font-weight: 600; color: var(--text); pointer-events: none; }
 .separator { margin: 0 8px; color: var(--border); }
 
-/* === Chief Module === */
+/* Chief Module */
 .chief-module-container { padding: 24px 0; margin-bottom: 30px; border-bottom: 1px solid var(--border); }
 .chief-card {
     display: flex; align-items: center; gap: 30px; background: var(--surface);
@@ -75,7 +75,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
 .chief-area, .chief-email { font-size: 14px; color: var(--muted); }
 .chief-info .subordinate-count { font-size: 14px; font-weight: 600; color: var(--muted); margin-top: 8px; display: block; }
 
-/* === Subordinate List & Modules === */
+/* Subordinate List & Modules  */
 .subordinate-list { margin-top: 20px; }
 .empty-state { text-align: center; color: var(--muted); font-style: italic; padding: 40px; border: 1px dashed var(--border); border-radius: var(--radius); }
 .area-group-section { margin-bottom: 30px; }
@@ -110,7 +110,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
 .btn-detail { color: var(--muted); }
 
 
-/* === VISTA DE ÁRBOL (Diagrama) STYLES - Ultra Compacta V8.4/V8.5 === */
+/* VISTA DE ÁRBOL (Diagrama)*/
 .org-chart-tree {
     display: flex; justify-content: center; align-items: flex-start;
     padding: 30px 10px; overflow-x: auto; min-height: 400px; 
@@ -122,6 +122,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
     align-items: center; 
     position: relative;
     margin-inline: 8px; 
+ 
 }
 .root-branch { margin-inline: 0; }
 
@@ -134,6 +135,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
     box-shadow: var(--shadow-light); 
     padding: 10px; 
     gap: 5px; 
+    
     
     display: flex;
     flex-direction: column; 
@@ -165,11 +167,11 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
     font-weight: 700; margin: 0; color: var(--text); 
 } 
 .node .info .puesto { 
-    font-size: 11px; 
+    font-size: 13px; 
     color: var(--accent); font-weight: 600; margin: 0; 
 } 
 .node .info .area { 
-    font-size: 10px; 
+    font-size: 12px; 
     color: var(--muted); margin: 0; 
 } 
 
@@ -220,7 +222,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
 .root-branch > .children > .branch > .node::before { top: 40px; }
 
 
-/* === ESTILOS DEL QUICK TOOLTIP V8.5 === */
+/*tooltip */
 .quick-tooltip {
     /* Base de la caja flotante */
     position: absolute;
@@ -231,7 +233,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
     border-radius: var(--radius);
     box-shadow: var(--shadow-hover);
     padding: 15px;
-    pointer-events: none; /* Asegura que el tooltip no interfiera con los clics */
+    pointer-events: none; 
     opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
     transform: translateY(10px);
@@ -278,7 +280,7 @@ body { margin: 0; font-family: 'Inter', system-ui, -apple-system, "SF Pro Text",
     white-space: nowrap;
 }
 
-/* === Modo de Impresión Limpia (Mantenido) === */
+/* Modo de Impresión Limpia  */
 @media print {
     .app-header, .breadcrumb-nav, .chief-actions, .subordinate-module .actions, .modal, .btn-focus, .quick-tooltip { display: none !important; }
     body { background: #fff !important; color: #000 !important; }

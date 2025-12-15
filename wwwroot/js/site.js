@@ -1,5 +1,4 @@
-﻿// site.js (V8.5: Con Tooltip de Resumen Rápido - Lógica de Búsqueda Modular CORREGIDA)
-
+﻿
 (function(){
     const datos   = window.__NODOS__ || [];
     const rootElModular  = document.getElementById('org-view');
@@ -25,7 +24,7 @@
     let currentChiefId = null; 
     let currentViewMode = 'modular'; 
 
-    // === Utilidades y Construcción del Árbol ===
+    // Utilidades y Construcción del Árbol 
     function getVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
     const areaColor = (area) => { 
         const a = (area || '').toLowerCase();
@@ -83,7 +82,7 @@
         return map;
     }
 
-    // === Lógica del Tooltip V8.5 ===
+    // Lógica del Tooltip 
 
     function createTooltipContent(node) {
         let content = el('div');
@@ -156,7 +155,7 @@
         element.addEventListener('mouseout', hideTooltip);
     }
 
-    // === Renderizado Modular ===
+    //Renderizado Modular 
     
     function renderSubordinateModule(node){ 
         const module = el('div', `subordinate-module ${areaClass(node.area)}`);
@@ -209,7 +208,7 @@
             }
         });
 
-        // V8.5: Aplicar eventos de tooltip
+        //  Aplicar eventos de tooltip
         applyTooltipEvents(module, node); 
         
         return module;
@@ -331,9 +330,8 @@
         hideTooltip(); 
     }
 
-    // =======================================
-    // === VISTA DE ÁRBOL (Diagrama) LÓGICA ===
-    // =======================================
+    // === VISTA DE ÁRBOL (Diagrama) 
+
 
     function renderTreeNode(node){
         const branch = el('div', 'branch'); 
@@ -469,10 +467,8 @@
         });
     }
     
-    // =======================================
-    // === GESTIÓN DE VISTAS Y MODAL ===
-    // =======================================
 
+    // === GESTIÓN DE VISTAS Y MODAL
     window.toggleView = function(){ 
         hideTooltip(); // Ocultar el tooltip al cambiar de vista
         if (currentViewMode === 'modular'){
