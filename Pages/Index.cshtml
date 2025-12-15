@@ -1,49 +1,89 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Organigrama";
+    ViewData["Title"] = "Organigrama - V8.5 (Ultra Compacto con Tooltip)";
     Layout = "_Layout";
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/organizacion.css">
 }
-</style>
-<section>
 
-    <div id="orgchart" class="orgchart-root" aria-live="polite"></div>
+<div class="app-container">
+    <header class="app-header">
+        <div class="brand">
+            <div class="logo-dot"></div>
+            Organigrama TI
+        </div>
+        <div class="header-actions">
+            <button id="toggleViewBtn" class="btn btn-secondary" onclick="window.toggleView()">
+                Ver Diagrama &nbsp;
+            </button>
+            <input type="search" id="buscador" placeholder="Buscar personal..." class="search-input"
+                aria-label="Búsqueda de personal">
+            <button class="btn btn-secondary" onclick="alert('Filtros avanzados.');">
+                Filtros &nbsp;
+            </button>
+        </div>
+    </header>
 
-    <!-- Modal para detalles (CV a futuro) -->
+    <main class="main-content">
+        <nav class="breadcrumb-nav" aria-label="Ruta de navegación">
+            <ul id="breadcrumb" class="breadcrumb-list">
+            </ul>
+        </nav>
+
+        <div id="org-view" class="org-view view-active">
+            <div id="current-chief-module" class="chief-module-container"></div>
+            <div id="subordinate-list" class="subordinate-list">
+            </div>
+        </div>
+
+        <div id="org-chart-tree" class="org-chart-tree org-view" style="display:none;">
+        </div>
+    </main>
+
     <dialog id="detalleModal" class="modal">
-        <form method="dialog" class="modal-card">
+        <div id="modalCard" class="modal-card">
             <header class="modal-header">
-                <h2 id="modalTitulo">Detalle</h2>
-                <button class="btn-cerrar" value="close" aria-label="Cerrar">✕</button>
+                <div class="badge">
+                    <span id="modalBadgeDot" class="badge-dot"></span>
+                    <h2 id="modalNombre"></h2>
+                </div>
+                <button class="btn-cerrar" value="close" onclick="cerrarModal()" aria-label="Cerrar modal">✕</button>
             </header>
             <div class="modal-content">
                 <div class="modal-avatar">
-                    <div id="modalAvatar" class="avatar"></div>
+                    <div id="modalAvatar" class="avatar" role="img"></div>
                 </div>
                 <div class="modal-info">
-                    <p><strong>Nombre:</strong> <span id="modalNombre"></span></p>
-                    <p><strong>Puesto:</strong> <span id="modalPuesto"></span></p>
-                    <p><strong>Área:</strong> <span id="modalArea"></span></p>
-                    <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                    <div class="detail-group">
+                        <div class="label">Puesto:</div>
+                        <div id="modalPuesto" class="value"></div>
+                    </div>
+                    <div class="detail-group">
+                        <div class="label">Área:</div>
+                        <div id="modalArea" class="value"></div>
+                    </div>
+                    <div class="detail-group">
+                        <div class="label">Email:</div>
+                        <div id="modalEmail" class="value"></div>
+                    </div>
                     <hr />
-                    <p class="muted">CV y actividades</p>
+                    <p class="notes">Perfil completo y responsabilidades del puesto.</p>
                 </div>
             </div>
             <footer class="modal-footer">
-                <button class="btn" value="close">Cerrar</button>
+                <button class="btn btn-accent">Ver Perfil Completo</button>
+                <button class="btn btn-cerrar" onclick="cerrarModal()">Cerrar</button>
             </footer>
-        </form>
+        </div>
     </dialog>
-    <script src="../wwwroot/js/site.js"></script>
-</section>
+</div>
+
+<div id="quickTooltip" class="quick-tooltip" style="display: none;"></div>
 
 @section Scripts {
-
     <script src="~/js/nodos.js"></script>
     <script src="~/js/site.js"></script>
-
 }
