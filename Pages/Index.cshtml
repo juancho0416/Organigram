@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Organigrama TI";
+    ViewData["Title"] = "Organigrama";
     Layout = "_Layout";
 }
 
@@ -21,8 +21,8 @@
             </button>
             <input type="search" id="buscador" placeholder="Buscar personal..." class="search-input"
                 aria-label="Búsqueda de personal">
-            <button class="btn btn-secondary" onclick="alert('Filtros avanzados.');">
-                Filtros &nbsp;
+            <button class="btn btn-secondary" onclick="window.toggleFilterPanel()" id="filterBtn">
+                Filtros de Área &nbsp;
             </button>
         </div>
     </header>
@@ -39,7 +39,18 @@
             </div>
         </div>
 
-        <div id="org-chart-tree" class="org-chart-tree org-view" style="display:none;">
+        <div id="area-results-view" class="area-results-view" style="display:none;">
+        </div>
+
+        <div id="org-chart-tree-container" class="org-chart-tree-container" style="display:none;">
+            <div id="treeControls" class="tree-controls">
+                <button id="centerViewBtn" class="btn btn-secondary" onclick="window.centerView()">
+                    Centrar Vista
+                </button>
+            </div>
+
+            <div id="org-chart-tree" class="org-chart-tree org-view">
+            </div>
         </div>
     </main>
 
@@ -82,6 +93,21 @@
 </div>
 
 <div id="quickTooltip" class="quick-tooltip" style="display: none;"></div>
+
+<div id="filterPanel" class="filter-panel" aria-hidden="true">
+    <div class="filter-header">
+        <h3>Filtro por Áreas </h3>
+        <button class="btn-cerrar" onclick="window.toggleFilterPanel()" aria-label="Cerrar Panel">✕</button>
+    </div>
+    <div id="filterOptionsContainer" class="filter-options-container">
+    </div>
+    <div class="filter-actions">
+        <button class="btn btn-accent" onclick="window.applyFilters()">Aplicar Filtros</button>
+        <button class="btn btn-secondary" onclick="window.clearFilters()">Limpiar Filtros</button>
+    </div>
+</div>
+
+<div id="filterOverlay" class="filter-overlay" onclick="window.toggleFilterPanel()"></div>
 
 
 @section Scripts {
